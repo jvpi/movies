@@ -1,0 +1,50 @@
+.flex-section{
+    width: 100%;
+    height: 56%;
+    display: flex;
+    justify-content: center;
+}
+
+.section{
+    width: 90%;
+    height: 100%;
+    border: 2px solid #fffefefd;
+    display: flex;
+    align-items: center;
+}
+.content{
+    width: 400px;
+    height: 70%;
+    border: 1px solid #fffefefd;
+    text-align: center;
+}
+.tittle-movie-principal{
+    font-size: 1.7em;
+   padding: 10px 0;
+   text-transform: uppercase;
+}
+
+.tittle-movie-principal span{
+  background-color: red;
+    padding: 0 15px;
+   
+}
+
+
+
+
+/*-----*/
+.flex-card{
+    width: 100%;
+    height: 36%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.card{
+    width: 90%;
+    height: 100%;
+    border: 2px solid #fffefefd;
+}
+
