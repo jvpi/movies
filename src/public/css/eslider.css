@@ -1,0 +1,59 @@
+.flex-slider{
+    width: 100%;
+    height: 36%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.content-slider{
+    width: 90%;
+    height: 100%;
+  
+    display: flex;
+}
+
+.card{
+    width: 125px;
+    height: 100%;
+  
+    border-radius: 10px;
+    margin: 0 5px;
+    position: relative;
+}
+.img-bojack{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.descripcion-movies{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+  /*  background-color: red;*/
+    z-index: 10;
+    border-radius: 0 0 10px 10px;
+    bottom: 0;
+}
+.descripcion-movies::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(185, 185, 185, .1);
+   z-index: -1;
+    border-radius: 0 0 10px 10px;
+   backdrop-filter: blur(5px);
+}
+.card-tittle-movies{
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    font-weight: bold;
+}
+.card-descripcion-movies{
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    font-weight: bold;
+}
