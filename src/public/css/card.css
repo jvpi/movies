@@ -14,9 +14,7 @@
 }
 .content{
     width: 500px;
-    
-    border: 1px solid #fffefefd;
-    padding-left: 8%;
+
 }
 .tittle-movie-principal{
     font-size: 1.7em;
@@ -29,7 +27,7 @@
     text-transform: capitalize;
 }
 .tittle-movie-principal span{
-  background-color: red;
+  background-color: black;
     padding: 0 15px;
    
 }
@@ -39,6 +37,8 @@
 }
 .content-descripcion-movie{
     margin-top: 10px;
+   font-size: 0.8em;
+    
 }
 .content-icono{
     background-color: red;

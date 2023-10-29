@@ -1,0 +1,53 @@
+
+@media   (max-width: 420px) {
+   
+    .content-slider{
+        overflow: auto;
+    }
+    .header-nav{
+      display: block;
+        
+      }
+      .card{
+        min-width:  100px;
+       min-height:  100%;
+      
+     }
+      .header-container-movies{
+        width: 100%;
+        height: 100%;
+       
+      }
+      .header-input-search{
+       width: 100%;
+       
+      }
+      .header-tittle{
+        font-size: 1.2em;
+        text-align: center;
+        margin: 8px 0;
+       
+      }
+      .tittle-movie-principal{
+        font-size: 1.2em;
+        margin-top: 10px;
+        margin-bottom: -10px;
+        
+      }
+     .content-descripcion-movie{
+        margin-top:0px;
+       font-size: 0.7em;
+        
+    }
+}
+
+@media  (max-width: 1190px){
+    .content-slider{
+       overflow-x: auto;
+    }
+    .card{
+        min-width:  100px;
+       min-height:  100%;
+      
+     }
+}
