@@ -6,7 +6,8 @@
     <header class="header">
       <div class="header-container-movies">
         <nav class="header-nav">
-          <h1 class="header-tittle">Kamuai</h1>
+          <a href="/"><h1 class="header-tittle">Kamuai</h1></a>
+          
           <div>
             <input type="text" class="header-input-search" placeholder="buscar">
           </div>
@@ -27,7 +28,10 @@
                 <span class="subtitulos">Accion / </span><span class="subtitulos">Drama / </span><span class="subtitulos">Suspenso</span>
               </div>
               <div>
-                <button type="button" id="button-play"><span class="icon-play3 icono-play"></span></button>
+                <a href="/serie/">
+                  <button type="button" id="button-play"><span class="icon-play3 icono-play"></span></button>
+                </a>
+              
                 
               </div>
               <p class="content-descripcion-movie">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, amet corrupti. Architecto maiores necessitatibus soluta enim officia ab, ?</p>
@@ -101,17 +105,22 @@
     <div id="modal" class="modal">
       <div class="cerrar-modal"><span id="icon-cross" class="icon-cross"></span></div>
       <div class="content-movie">
-       <video src="videos/Mr. Robot Season 1 - Trailer.mp4" controls class="modal-video"></video>
+       <video src="/Mr. Robot Season 1 - Trailer.mp4" controls class="modal-video"></video>
       </div>
      
     </div>
-   <!-- <form action="/" method="post" enctype="multipart/form-data">
+    <form action="/" method="post">
+      <input type="text" name="nombreCarpeta">
+      <input type="submit" value="enviar">
+    </form>
+  
+    <!--
+       <form action="/" method="post" enctype="multipart/form-data">
        <input type="file" name="avatar" id="" > 
      
       <input type="submit" value="enviar">
     </form>
- <input type="file" name="avatar" id=""> 
-  enctype="multipart/form-data"-->
+ -->
   </body>
 
 </html>
