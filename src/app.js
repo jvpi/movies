@@ -8,25 +8,39 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 let helmet = require('helmet')
 var app = express();
-
+let cors = require('cors')
+let flash = require('connect-flash')
+let session = require('express-session')
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+//app.set('views', path.join(__dirname, 'views/admin'));
 app.set('view engine', 'ejs');
 
 //app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+  secret:'secret',
+  resave:true,
+  saveUninitialized:true
+}))
+app.use(flash())
 app.use(helmet())
+
 app.use(
   helmet.frameguard({
     action: "deny",
   })
 );
+app.use(function (req,res,next) {
+  res.locals.message = req.flash('mensaje')
+  next()
+})
+//app.use(cors())
 // archivos estaticos 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, '../file')));
-app.use('/', indexRouter);
+app.use( indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

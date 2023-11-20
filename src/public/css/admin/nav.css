@@ -1,0 +1,11 @@
+.nav{
+    width: 100%;
+}
+.nav-ul{
+    width: 100%;
+    display: flex;
+    padding-left: 20px;
+}
+.nav-li{
+    margin-right: 15px;
+}

@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="media-src 'self'">
+    
     <title>Document</title>
+    <link rel='stylesheet' href='/iconos/film/style.css' />
+    <link rel='stylesheet' href='/css/normalize.css' />
+    <link rel='stylesheet' href='/css/admin/header.css' />
+    <link rel='stylesheet' href='/css/admin/nav.css' />
+    <script type="module" src="/javascripts/fileReader.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="object-src 'self'">
 </head>
-<body>
-    <header class="header">
-        <a href="">
-            Kamuai
-        </a>
-    </header>
+<body id="body">
+  <%- include("./templates/headerAdmin") %>
+    <div class="content-form">
+         <div class="form">
+           
+            <div class="div-file-video">
+                <p class="titulo-file">Adjuntar Archivos</p>
+                <input type="file" name="avatar" id="file-img" multiple class="block input-file"> 
+                
+            </div>
+            <div id="content-result-fileReader" class="content-result-fileReader">
+         </div>
+         <input type="submit" value="enviar" id="btnsubmit" class="block btn">
+        </div> 
+     
+        
+    </div>
 </body>
+
 </html>

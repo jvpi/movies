@@ -5,17 +5,20 @@ indexController.renderIndex = function(req, res, next) {
 
 }
 indexController.subirArchivos = function (req, res) {
+    console.log(req.body);
     const {nombreCarpeta} = req.body
-  
-    directorio.crear(nombreCarpeta)
-    res.redirect('/')
+    let respuesta = {ok:'ok'}
+    res.json(respuesta)
+    //directorio.crear(nombreCarpeta)
+    //res.redirect('/admin/');
 }
 indexController.video = function(req, res, next) {
     let serieDescipcion = {
         folder:'file',
         nombre:'  Mr. Robot Season 1 - Trailer.mp4'
     }
-    res.render('movies',{serieDescipcion});
+   // res.render('admin');
+    
 }
-
-module.exports = indexController
+//,{serieDescipcion}  
+module.exports = indexController  
