@@ -100,6 +100,7 @@
    
     display: flex;
     justify-content: center;
+
 }
 
 .form-crearCarpeta{
@@ -107,9 +108,38 @@
     display: flex;
     justify-content: center;
     width: 40%;
+     
     
 }
 .input-form-crearCarpeta{
     width: 90%;
     margin-right: 20px;
+
+}
+.content-directorio-mensaje{
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    align-items: center;
+    width: 100%;
+}
+.directorio-mensaje-existe{
+     font-weight: 700;
+    background-color: #ffc4c4;
+    color: #FF6969;
+    padding: 8px 0;
+    text-align: center;
+    width: 40%;
+    border: 1px solid #FD4A4A;
+    margin-top: 5px;
+}
+.directorio-mensaje-creado{
+   font-weight: 700;
+    background-color: #7CEC94;
+    color: #2E9C43;
+    text-align: center;
+    padding: 8px 0;
+    width: 40%;
+    border: solid 1px #47B256;
+    margin-top: 5px;
 }

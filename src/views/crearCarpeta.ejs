@@ -9,17 +9,20 @@
         <link rel='stylesheet' href='/css/normalize.css' />
         <link rel='stylesheet' href='/css/admin/header.css' />
         <link rel='stylesheet' href='/css/admin/nav.css' />
-        <script type="module" src="/javascripts/crearCarpeta.js"></script>
+        <script type="module" src="/javascripts/crearCarpeta.js"></script> 
+        <script type="module" src="/javascripts/mensajesCrearDirectorio.js"></script>
         <meta http-equiv="Content-Security-Policy" content="object-src 'self'">
     </head>
 <body>
     <%- include("./templates/headerAdmin") %>
-    <div class="content-form-crearCarpeta">
-       
-        <% if(message){ %>
-            <h1 style="color:black;"><%= message  %></h1>
+    <div class='content-directorio-mensaje' id='content-directorio-mensaje'>
+        <% if(message_directorio_creado || message__directorio_ya_existe ){ %>
+            <h1 ><%= message_directorio_creado  %></h1>
+             <h1 class=''><%= message__directorio_ya_existe  %></h1>
         <% } %>
         
+    </div>
+    <div class="content-form-crearCarpeta">
         <form action="/crearCarpeta" method="post" class="form-crearCarpeta" id="form-crearCarpeta">
             <input type="text" class="block input-text input-form-crearCarpeta" name="nombreDirectorio" id="text">
             <input type="submit" value="Enviar" class="block btn" >

@@ -11,6 +11,7 @@ var app = express();
 let cors = require('cors')
 let flash = require('connect-flash')
 let session = require('express-session')
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 //app.set('views', path.join(__dirname, 'views/admin'));
@@ -34,7 +35,8 @@ app.use(
   })
 );
 app.use(function (req,res,next) {
-  res.locals.message = req.flash('mensaje')
+  res.locals.message_directorio_creado = req.flash('mensaje_directorio_creado')
+  res.locals.message__directorio_ya_existe = req.flash('mensaje_directorio_ya_existe')
   next()
 })
 //app.use(cors())

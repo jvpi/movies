@@ -1,5 +1,6 @@
 const controller = {}
 const directorio = require('../../helpers/crear-directorio/crearDirectorio.js')
+let leerDirectorio = require('../../helpers/cobtenerDirectorio.js')
 const fs = require('fs')
 const path = require('path');
 controller.render = function (req,res) {
@@ -7,10 +8,9 @@ controller.render = function (req,res) {
 }
 controller.crearCarpeta = function (req,res) {
     let {nombreDirectorio} = req.body
+    console.log(nombreDirectorio)
     if (fs.existsSync(`./chernobil/${nombreDirectorio}/`)) {
-         //console.log('el directorio ya existe');
-         req.flash('mensaje','el directorio ya existe')
-         //console.log(req.flash('mensaje'));
+         req.flash('mensaje_directorio_ya_existe','El directorio ya existe')
          res.redirect('/crearCarpeta')
          return  false
      } else {
@@ -18,9 +18,7 @@ controller.crearCarpeta = function (req,res) {
              if (error) {
                  console.log(error);
              }
-            // console.log('directorio creado');
-             req.flash('mensaje','directorio creado')
-            // console.log(req.flash('mensaje'));
+             req.flash('mensaje_directorio_creado','Directorio creado')
              res.redirect('/crearCarpeta')
             return false
          })
